@@ -7,14 +7,15 @@ public class Student extends Person {
     private String Matrikelnummer;
     private Double Gesamtnote;
     private ArrayList<LVA> LVAs;
-    private ArrayList<Double> Noten;
-    private ArrayList<Elter> Eltern;
+    
+    private ArrayList<Double> Noten = new ArrayList<>();
+    private ArrayList<Elter> Eltern = new ArrayList<>();
 
     public Student(String Vorname, String Nachname, String Id, String Email, int Alter, String Geschlect, String Matrikelnummer) {
         super(Vorname, Nachname, Id, Email, Alter, Geschlect);
         this.Matrikelnummer = Matrikelnummer;
     }
-
+     
     public String getMatrikelnummer() {
         return Matrikelnummer;
     }
@@ -114,5 +115,20 @@ public class Student extends Person {
     public void setGeschlect(String Geschlect) {
         this.Geschlect = Geschlect;
     }
-
+    
+        // the method below checks if the student number consists of digits and has a length of 9
+    public boolean checkMatrikelNummer(String s) {
+        for (char c : s.toCharArray()) {
+            if (Character.isDigit(c) && s.length() == 9) {
+                return true;
+            }
+        }
+        System.out.println("False student id entered");
+        return false;
+    }
+    
+    // Lists the courses that enrolled by student. Database connection will be included later
+    public void checkLVA(Student s, LVA lva) {
+        
+    }
 }

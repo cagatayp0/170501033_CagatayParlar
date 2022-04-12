@@ -6,8 +6,9 @@ public class LVA {
     private String Name;
     private String Code;
     private String Klassenzimmer;
-    private ArrayList<Student> Studenten;
-    private ArrayList<Pruefung> Pruefungen;
+    
+    private ArrayList<Student> Studenten = new ArrayList<>();
+    private ArrayList<Pruefung> Pruefungen = new ArrayList<>();
     
     public LVA(String Name, String Code, String Klassenzimmer){
         this.Name = Name;
