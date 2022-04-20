@@ -1,6 +1,6 @@
 package ozdekur;
 
-public class Person {
+abstract public class Person {
 
     protected String Vorname;
     protected String Nachname;
@@ -76,6 +76,15 @@ public class Person {
 
     public void setGeschlect(String Geschlect) {
         this.Geschlect = Geschlect;
+    }
+    
+    public boolean checkId(String s) {
+        for (Character c : s.toCharArray()) {
+            if (Character.isDigit(c) && s.length()==11) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

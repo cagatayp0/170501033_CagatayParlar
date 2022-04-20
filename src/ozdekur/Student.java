@@ -6,8 +6,8 @@ public class Student extends Person {
 
     private String Matrikelnummer;
     private Double Gesamtnote;
-    private ArrayList<LVA> LVAs;
     
+    private ArrayList<LVA> LVAs = new ArrayList<>();
     private ArrayList<Double> Noten = new ArrayList<>();
     private ArrayList<Elter> Eltern = new ArrayList<>();
 
@@ -128,7 +128,19 @@ public class Student extends Person {
     }
     
     // Lists the courses that enrolled by student. Database connection will be included later
-    public void checkLVA(Student s, LVA lva) {
-        
+    public void listLVA() {
+        for (LVA lva : LVAs) {
+            System.out.println(lva.getName());
+        }
     }
+    
+    public boolean checkLVA(String code) {
+        for (LVA lva : LVAs) {
+            if (code.equals(lva.getCode())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
 }
