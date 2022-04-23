@@ -9,9 +9,9 @@ public class DatabaseUtilities {
     public static String url = "jdbc:mysql://localhost:3306/ozdekur";
     public static String user = "root";
     public static String password = "xTy75pqR!31Try";
-    
+
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
-        Class.forName ("com.mysql.cj.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         return connection;
     }

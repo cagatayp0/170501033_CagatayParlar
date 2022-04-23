@@ -9,7 +9,7 @@ public class StudentManager {
 
     public boolean insert(Student student) throws ClassNotFoundException, SQLException {
         Connection connection = DatabaseUtilities.getConnection();
-        
+
         String sql = "insert into student (Number, Name, Surname) values (?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, student.getMatrikelnummer());
@@ -20,8 +20,8 @@ public class StudentManager {
         connection.close();
         return affected == 1;
     }
-    
-        public Student find(String number) throws ClassNotFoundException, SQLException {
+
+    public Student find(String number) throws ClassNotFoundException, SQLException {
         Student student = null;
         Connection connection = DatabaseUtilities.getConnection();
         String sql = "select * from student where Number=?";
@@ -38,5 +38,5 @@ public class StudentManager {
         connection.close();
         return student;
     }
-    
+
 }
