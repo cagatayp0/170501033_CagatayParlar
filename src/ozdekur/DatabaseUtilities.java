@@ -6,13 +6,13 @@ import java.sql.SQLException;
 
 public class DatabaseUtilities {
 
-    public static String url = "";
-    public static String user = "";
-    public static String passwort = "";
-
-    public static Connection getConnection() throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection(url, user, passwort);
+    public static String url = "jdbc:mysql://localhost:3306/ozdekur";
+    public static String user = "root";
+    public static String password = "xTy75pqR!31Try";
+    
+    public static Connection getConnection() throws ClassNotFoundException, SQLException {
+        Class.forName ("com.mysql.cj.jdbc.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
         return connection;
     }
 }
