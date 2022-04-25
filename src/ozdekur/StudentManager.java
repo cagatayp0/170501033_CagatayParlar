@@ -8,17 +8,15 @@ import java.sql.SQLException;
 public class StudentManager {
 
     public boolean insert(Student student) throws ClassNotFoundException, SQLException {
+        int affected;
         Connection connection = DatabaseUtilities.getConnection();
-
         String sql = "insert into student (Number, Name, Surname) values (?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, student.getMatrikelnummer());
         statement.setString(2, student.getVorname());
         statement.setString(3, student.getNachname());
-        int affected = statement.executeUpdate();
-
-        connection.close();
-        return affected == 1;
+        affected = statement.executeUpdate();
+        return affected >= 1;
     }
 
     public Student find(String number) throws ClassNotFoundException, SQLException {

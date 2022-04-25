@@ -15,7 +15,7 @@ public class Student extends Person {
         super(Vorname, Nachname, Id, Email, Alter, Geschlect);
         this.Matrikelnummer = Matrikelnummer;
     }
-
+    
     public Student() {
     }
 
