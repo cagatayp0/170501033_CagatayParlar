@@ -30,7 +30,7 @@ public class StudentManager {
         if (resultset.next()) {
             student = new Student();
             student.setVorname(resultset.getString("Name"));
-            student.setNachname(resultset.getString("Nachname"));
+            student.setNachname(resultset.getString("Surname"));
             student.setMatrikelnummer(resultset.getString("Number"));
         }
         connection.close();
