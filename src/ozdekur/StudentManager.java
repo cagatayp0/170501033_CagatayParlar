@@ -37,4 +37,14 @@ public class StudentManager {
         return student;
     }
 
+    public boolean delete(String number) throws ClassNotFoundException, SQLException {
+        Connection connection = DatabaseUtilities.getConnection();
+        String sql = "delete from student where Number=?";
+        PreparedStatement statement = connection.prepareCall(sql);
+        statement.setString(1, number);
+        int affected = statement.executeUpdate();
+        connection.close();
+        return affected == 1;
+    }
+
 }
