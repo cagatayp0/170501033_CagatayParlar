@@ -16,6 +16,12 @@ public class Student extends Person {
         this.Matrikelnummer = Matrikelnummer;
     }
     
+    public Student(String Vorname, String Nachname, String Matrikelnummer) {
+        this.Vorname = Vorname;
+        this.Nachname = Nachname;
+        this.Matrikelnummer = Matrikelnummer;
+    }
+    
     public Student() {
     }
 

@@ -7,8 +7,7 @@ import ozdekur.StudentManager;
 public class InsertTest {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        Student s1 = new Student("Frank", "Mustermann", "12345678456",
-                "frank@mail.com", 21, "Male", "175501546");
+        Student s1 = new Student("Frank", "Mustermann", "123421022");
         StudentManager manager = new StudentManager();
         boolean inserted = manager.insert(s1);
         System.out.println("Inserted: " + inserted);
