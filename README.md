@@ -4,7 +4,7 @@
 
 ### Database Connection
 
-Now it's able to insert, search and delete students in the database. Following images shows a quick demonstration.
+Now it's able to insert, search and delete students in the database. Following images show a quick demonstration.
 
 #### Insert Student in a Database
 
@@ -13,7 +13,7 @@ Here's an example of the instert method. It creates a student object and passes 
 
 #### Search Student in a Database
 
-This method return the student object if given student number and the number on the db match.
+This method returns the student object if given student number and the number on the db match.
 ![implementation of search method](/utils/260422-find.png "img")
 
 #### Delete Student from Database
@@ -23,5 +23,5 @@ Deletes students in the db if the given student number matches the number on the
 
 ### First Version of GUI Design
 
-I started to design GUI. It has a relatively simple design right now. It'll be developed later.
+I started to design GUI. It's a relatively simple design right now. It'll be developed later.
 ![first gui design](/utils/260422-gui.png "img")
