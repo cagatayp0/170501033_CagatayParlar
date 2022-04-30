@@ -7,6 +7,6 @@ public class DeleteTest {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         StudentManager manager = new StudentManager();
         System.out.println(manager.delete("123453122"));
-        System.out.println(manager.delete("175501546"));
+        System.out.println(manager.delete("123421022"));
     }
 }
