@@ -1,4 +1,6 @@
+
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,19 +13,19 @@ import javafx.stage.Stage;
 
 public class OzDeKurFX extends Application {
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage primaryStage) throws InvocationTargetException, IOException {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("FXML.fxml"));
             Scene scene1 = new Scene(root);
             primaryStage.setScene(scene1);
             primaryStage.show();
-        } catch (IOException e) {
-            System.out.println(e);
+        } catch (Exception e) {
+            e.getCause().printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
