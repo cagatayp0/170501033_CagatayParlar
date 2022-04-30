@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="FXMLController">
+   <children>
+      <Button layoutX="413.0" layoutY="200.0" mnemonicParsing="false" text="Login" />
+      <TextField layoutX="296.0" layoutY="92.0" />
+      <TextField layoutX="296.0" layoutY="151.0" />
+      <Text layoutX="150.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name" />
+      <Text layoutX="150.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Button layoutX="210.0" layoutY="291.0" mnemonicParsing="false" text="I don't have an account" />
+      <Button layoutX="210.0" layoutY="329.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="171.0" text="I forgot my password" />
+   </children>
+</AnchorPane>
