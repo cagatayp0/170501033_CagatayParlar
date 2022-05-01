@@ -11,6 +11,7 @@ public class ListTest {
         StudentManager manager = new StudentManager();
         List<Student> studentList = manager.list();
         for (Student student : studentList) {
+            System.out.println("");
             System.out.println(student.getVorname()
                     + " " + student.getNachname()
                     + " " + student.getMatrikelnummer());
