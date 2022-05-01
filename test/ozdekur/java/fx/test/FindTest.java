@@ -14,7 +14,7 @@ public class FindTest {
                     + s1.getMatrikelnummer());
         }
 
-        Student s2 = manager.find("123421022");
+        Student s2 = manager.find("170501033");
         if (s2 != null) {
             System.out.println(s2.getVorname() + " " +  s2.getNachname()
                     + " " + s2.getMatrikelnummer());
