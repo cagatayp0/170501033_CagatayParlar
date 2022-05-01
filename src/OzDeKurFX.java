@@ -20,7 +20,7 @@ public class OzDeKurFX extends Application {
     @Override
     public void start(Stage primaryStage) throws InvocationTargetException, IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("FXML.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
             Scene scene1 = new Scene(root);
             primaryStage.setScene(scene1);
             primaryStage.show();
