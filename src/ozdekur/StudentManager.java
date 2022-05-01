@@ -56,7 +56,7 @@ public class StudentManager {
         PreparedStatement statement = connection.prepareStatement(sql);
         ResultSet resultset = statement.executeQuery();
 
-        if (resultset.next()) {
+        while (resultset.next()) {
             Student student = new Student();
             student.setVorname(resultset.getString("Name"));
             student.setNachname(resultset.getString("Surname"));
