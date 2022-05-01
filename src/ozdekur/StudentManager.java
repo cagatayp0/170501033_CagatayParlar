@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StudentManager {
 
@@ -45,6 +47,24 @@ public class StudentManager {
         int affected = statement.executeUpdate();
         connection.close();
         return affected == 1;
+    }
+    
+    public List<Student> list() throws ClassNotFoundException, SQLException {
+        List<Student> studentList = new ArrayList<Student>();
+        Connection connection = DatabaseUtilities.getConnection();
+        String sql = "select * from student";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        ResultSet resultset = statement.executeQuery();
+
+        if (resultset.next()) {
+            Student student = new Student();
+            student.setVorname(resultset.getString("Name"));
+            student.setNachname(resultset.getString("Surname"));
+            student.setMatrikelnummer(resultset.getString("Number"));
+            studentList.add(student);
+        }
+        connection.close();       
+        return studentList;
     }
 
 }
