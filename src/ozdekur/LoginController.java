@@ -1,4 +1,4 @@
-package ozdekur.layouts;
+package ozdekur;
 
 
 

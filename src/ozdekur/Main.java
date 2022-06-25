@@ -17,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws InvocationTargetException, IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/layouts/InitialScene.fxml"));
+        Parent root = FXMLLoader.load(Main.class.getResource("test.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
