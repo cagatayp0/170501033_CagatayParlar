@@ -1,3 +1,5 @@
+package ozdekur;
+
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import javafx.application.Application;
@@ -15,13 +17,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws InvocationTargetException, IOException {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
-            Scene scene1 = new Scene(root);
-            primaryStage.setScene(scene1);
-            primaryStage.show();
-        } catch (Exception e) {
-            e.getCause().printStackTrace();
-        }
+        Parent root = FXMLLoader.load(getClass().getResource("/layouts/InitialScene.fxml"));
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 }
